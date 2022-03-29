@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const student = require('./src/routes/student');
-const student = require('./src/routes/teacher');
+const student = require('./routes/student');
+const teacher = require('./routes/teacher');
 const session = require('express-session');
 const mysql = require('mysql');
 const { extend } = require('lodash');

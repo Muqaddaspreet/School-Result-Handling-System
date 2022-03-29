@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content=" IE=edge">
+    <meta name="viewport" content="width=device-width , initial-scale =1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .navbar{
+        height:80px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: white;
+        font-size: 28px;
+        position:relative;
+    }
+    body{
+        height:80vh;
+    }
+    .studentlogin , .teacherlogin{
+        width:160px;
+        padding:4px 6px;
+        font-size: 16px;
+        background-color: coral;
+        color: white;
+        border-radius: 10px;
+        /* border-radius: 3px;
+        border: 1px solid rgb(224, 240, 12);
+        padding: 5px;
+        background-color: black;
+        color: white; */
+    }
+    
+    .maincontent{
+        margin-top: 120px;
+        height:100%;
+        display: flex;
+        justify-content: center;
+    }
+    .recordsubmit{
+        margin-top:10px;
+        padding:4px 8px;
+        background-color: rgb(12, 12, 12);
+        color:white;
+        font-size: 16px;
+        border-radius: 12px;
+    }
+</style>
+<body>
+    <nav class = "navbar">
+        RESULT PAGE
+    </nav>
+    <div class="maincontent">
+        <div class="center">
+            <h1 class="title">Results are out!</h1>
+            <p class = "stline"> <h3>Check Your Result Now ASAP</h3></p>
+            <a href="/student"><button class = "studentlogin"><h3>Student Login</h3></button></a>
+
+            <p class="teachline">not a student?Go to our Teacher's portal<a href ="/teacher/login"><button class = "teacherlogin">Teacher Login</button></a></p>
+        </div>
+    </div>
+</body>
+<footer>
+    <nav class = "navbar">&copy Copyrights Reserved</nav>
+</footer>
+</html>
