@@ -4,63 +4,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content=" IE=edge">
     <meta name="viewport" content="width=device-width , initial-scale =1.0">
-    <title>Docuument</title>
+    <title>Result Management| Display Result</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-style: solid;
+            bottom: 0;
+            position:fixed;
+            background-color: rgba(213,232,212,0.5);
+            color: black;
+            border-style: solid;
+            border-color: rgb(213,232,212);
+            width: 100%;
+            text-align: center;
+            height: 30px;
+            font-size: 18px;
+        }
+        .navbar{
+            margin-top:2px;
+            height:60px;
+            display:flex;
+            background-color: rgba(213,232,212,0.5);
+            text-align: center;
+            color: black;
+            border-style: solid;
+            border-color: rgb(213,232,212);
+            font-size: 28px;
+            position:relative;
+        }
+        body{
+            min-height:100px;
+        }
+        .logoutbutton{
+            position:relative; 
+            float:right;
+        }
+        .container{
+            margin-top: 120px;
+            min-height:100%;
+            justify-content: center;
+        }
+    </style>
 </head>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<style>
-    *{
-        padding: 0;
-        margin: 0;
-    }
-    .navbar{
-        height:80px;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        background-color: black;
-        color: white;
-        font-size: 28px;
-        position:relative;
-    }
-    body{
-        height:100vh;
-    }
-    .maincontent{
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .result{
-        display: flex;
-        flex-direction: column;
-
-    }
-</style>
 <body>
     <nav class="navbar">
-        Student Result
-    </nav>
-    <div class="maincontent">
-        <div class="result">
-            <div class="rollnumber">
-                <label for="roll">Roll Number : </label>
-                <p id="roll" ><%=sr[0].rollnumber%></p>
-            </div>
-            <div class="name">
-                <label for="name">Name : </label>
-                <p id="sname" ><%=sr[0].sname%></p>
-            </div>
-            <div class="dob">
-                <label for="date">DOB : </label>
-                <p id="dob" ><%=sr[0].dob%></p>
-            </div>
-            <div class="score">
-                <label for="score">Score : </label>
-                <p id="score" ><%=sr[0].score%></p>
-            </div>
+        <div class="col-sm-12"><span class="mx-auto" style="text-align:center;">Student Management System</span>
+            <div class="logoutbutton"><a href="/teacher/logout" class="btn btn-danger btn-small btn-nav">Logout</a></div>
         </div>
+    </nav>
+    <div class="container col-sm-6 mx-auto">
+        <h4>Result</h4>
+        <table class="table">
+            <tbody>
+              <tr>
+                <th>Roll No :</th>
+                <td><%=sr[0].rollnumber%></td>
+              </tr>
+              <tr>
+                <th>Name :</th>
+                <td><%=sr[0].sname%></td>
+              </tr>
+              <tr>
+                <th>DOB :</th>
+                <td><%=sr[0].dob%></td>
+              </tr>
+              <tr>
+                <th>Score :</th>
+                <td><%=sr[0].score%></td>
+              </tr>
+            </tbody>
+          </table>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
 </body>
+<footer>
+    <span>&copy Copyrights Reserved</span>
+</footer>
+</html>

@@ -4,63 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content=" IE=edge">
     <meta name="viewport" content="width=device-width , initial-scale =1.0">
-    <title>Docuument</title>
+    <title>Result Management| Teacher Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-style: solid;
+            bottom: 0;
+            position:fixed;
+            background-color: rgba(213,232,212,0.5);
+            color: black;
+            border-style: solid;
+            border-color: rgb(213,232,212);
+            width: 100%;
+            text-align: center;
+            height: 30px;
+            font-size: 18px;
+        }
+        .navbar{
+            margin-top:2px;
+            height:60px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(213,232,212,0.5);
+            color: black;
+            border-style: solid;
+            border-color: rgb(213,232,212);
+            font-size: 28px;
+            position:relative;
+        }
+        body{
+            min-height:100px;
+        }
+        .container{
+            margin-top: 120px;
+            min-height:100%;
+            justify-content: center;
+        }
+    </style>
 </head>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<style>
-    *{
-        padding: 0;
-        margin: 0;
-    }
-    .navbar{
-        height:80px;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        background-color: black;
-        color: white;
-        font-size: 28px;
-        position:relative;
-    }
-    .login{
-        margin-top: 10px;
-        padding:4px 6px;
-        font-size: 16px;
-        background-color: coral;
-        color: white;
-        border-radius: 10px;
-        width: 160px;
-    }
-    .maincontent{
-        margin-top: 120px;
-        height:100%;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
-    body{
-        color:black;
-        height:100vh;
-    }
-</style>
 <body>
-    <nav class="navbar">
-        Teacher Login Pannel
-    </nav>
-    <div class = "maincontent">
-        <div class="left">
-            <form action = "/teacher/teachervalidate" method="post" class="loginform">
-                <div>
-                    <label for="email">Email ID   :</label>
-                    <input type="email"  name="email" id ="email" required>
+    <nav class="navbar">Student Management System</nav>
+    <a href="/teacher/logout" style="color:blue">Back</a>
+    <div class="container col-sm-4 mx-auto">
+        <div>
+            <h4>Find Result</h4>
+            <form class="form-hotizontal" action="/teacher/teachervalidate" method="post">
+                
+                <div class="form-group">
+                    <label class="col-sm-12" for="email">Email ID: </label>
+                    <div class="col-sm-12">
+                        <input type="email" placeholder="Enter your email id" id="email" name="email" required class="form-control">
+                    </div>
                 </div>
-                <div>
-                    <label for="password">PassWord :</label>
-                    <input type="password"  name="password" id ="password" required>
+                <div class="form-group">
+                    <label class="col-sm-12" for="password">Password : </label>
+                    <div class="col-sm-12">
+                        <input type="password" id="password" name="password" required class="form-control">
+                    </div>
                 </div>
-                <button type="submit" class="login">Login</button>
+                <br>
+                <button class="result btn btn-primary" type="submit" >Login</button>
+                <a class="result btn btn-primary" href="/teacher/login" >Clear</a>
             </form>
+            
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
+<footer>
+    <span>&copy Copyrights Reserved</span>
+</footer>
